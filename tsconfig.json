@@ -1,6 +1,6 @@
 {
   "display": "Create React App",
-  "extends": "https://json.schemastore.org/tsconfig",
+  "extends": "@tsconfig/create-react-app/tsconfig.json",
   
   "compilerOptions": {
     "baseUrl": "src",
@@ -9,8 +9,7 @@
   },
   "include": [
     "src",
-    "global.d.ts",
-    "__tests__"
+    "global.d.ts"
   ],
   "exclude": [
     "node_modules"

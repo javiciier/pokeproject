@@ -29,11 +29,14 @@
         "unused-imports"
     ],
     "rules": {
+        "no-multi-spaces": "warn",
+        "quotes": ["error", "single"],
+        "indent": ["error", 2],
+
+
         "react/react-in-jsx-scope": "off",
         "react/jsx-filename-extension": [
-            "warn", {
-                "extensions": [".tsx"]
-            }
+            "warn", { "extensions": [".tsx"] }
         ],
         "react-hooks/rules-of-hooks": "error",
         "react-hooks/exhaustive-deps": "warn",

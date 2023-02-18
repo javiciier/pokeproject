@@ -1,0 +1,31 @@
+.navbar {
+  height: 60px;
+  background-color: #ffde00;
+  position: relative;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+
+.navbar-items ul {
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+}
+
+.navbar-items ul a {
+  font-size: 1.5em;
+  text-decoration: none;
+  color: #3b4cca;
+}
+
+
+
+
