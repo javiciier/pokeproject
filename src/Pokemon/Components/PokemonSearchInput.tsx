@@ -18,7 +18,7 @@ const PokemonSearchInput = ({ onInputCallback }: Props): JSX.Element => {
   };
 
   return (
-    <div className='wrapper'>
+    <div className='searchBar'>
       <label htmlFor='search'>
         Busca un Pokemon
       </label>

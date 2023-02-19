@@ -1,4 +1,4 @@
-import './styles/header.css';
+import '../styles/header.css';
 import brand from 'assets/brand.png';
 
 interface HeaderLink {

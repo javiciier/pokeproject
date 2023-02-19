@@ -1,6 +1,5 @@
 import './styles/app.css';
-import Header from './Header';
-import Body from './Body';
+import { Body, Header } from './Components';
 
 const App = () : JSX.Element => {
   return (

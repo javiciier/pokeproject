@@ -3,11 +3,25 @@
     --button-width: 20%;
 }
 
+.searchBar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    padding: 20px;
+}
+
+label {
+    font-size: 2rem;
+}
+
 form {
     display: flex;
     flex-direction: row;
     padding: 5px;
-    border: 1px solid grey;
+    width: 80%;
+    margin: 0 auto;
 }
 
 input {
@@ -17,6 +31,7 @@ input {
     height: var(--line-height);
     width: calc(100% - var(--button-width));
     font-size: 2rem;
+    text-align: center;
 }
 
 input:focus {

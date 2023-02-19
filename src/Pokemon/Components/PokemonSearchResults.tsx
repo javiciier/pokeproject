@@ -1,12 +1,11 @@
 import { Pokemon } from '../Domain';
 import PokemonCard from './PokemonCard';
+import { NoResults } from 'Common';
 
 
 interface Props {
   pokemon: Nullable<Pokemon>
 }
-
-const NoPokemonResult = (): JSX.Element => <p>No se han encontrado resultados</p>
 
 const PokemonResult = ({pokemon}: Props): JSX.Element => {
   return (
@@ -20,7 +19,7 @@ const PokemonSearchResults = ({pokemon}: Props) : JSX.Element => {
   return (
     (hasFoundPokemon) ?
       <PokemonResult pokemon={pokemon} />
-      : <NoPokemonResult />
+      : <NoResults />
   )
 }
 

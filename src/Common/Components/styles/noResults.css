@@ -1,0 +1,20 @@
+.alert {
+    display: flex;
+    flex-direction: column;
+    align-content: stretch;
+    background: #FDF05D;
+    border: 2px solid orange;
+    border-radius: 10px;
+    margin: 20px;
+}
+
+.alert .header {
+    height: 20px;
+    border-radius: 10px 10px 0 0;
+    background: #EDE04D;
+}
+
+.alert .content {
+    font-size: 1.5rem;
+    text-align: center;
+}

@@ -1,5 +1,5 @@
-import './styles/body.css';
-import { PokemonSearch } from '../Pokemon';
+import '../styles/body.css';
+import { PokemonSearch } from '../../Pokemon';
 
 const Body = (): JSX.Element => {
 

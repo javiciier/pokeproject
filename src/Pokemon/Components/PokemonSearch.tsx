@@ -3,6 +3,7 @@ import PokemonSearchInput from './PokemonSearchInput';
 import PokemonSearchResults from './PokemonSearchResults';
 import { pokemonService as service } from '../Application';
 import { Pokemon } from '../Domain';
+import './styles/pokemonSearch.css';
 
 const PokemonSearch = (): JSX.Element => {
   const [query, setQuery] = useState<string>('');
@@ -29,7 +30,7 @@ const PokemonSearch = (): JSX.Element => {
   }, [query])
 
   return (
-    <div>
+    <div className="pokemonSearch">
       <PokemonSearchInput onInputCallback={handleQueryChange} />
       <PokemonSearchResults pokemon={pokemon}/>
     </div>
