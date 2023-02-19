@@ -1,36 +1,44 @@
-.searchBar {
-    position: relative;
-    margin: 30% auto 0;
+:root {
+    --line-height: 40px;
+    --button-width: 20%;
+}
+
+form {
     display: flex;
-    flex-direction: column;
-    align-content: space-around;
-    justify-content: center;
-    align-items: center;
-    width: 80%;
-    font-size: 2rem;
+    flex-direction: row;
+    padding: 5px;
+    border: 1px solid grey;
 }
 
 input {
-    border: none;
+    flex-grow: 2; /* Aprovechar espacio disponible */
+    border: 0;
     border-bottom: 2px solid gold;
-    width: 80%;
-    line-height: 40px;
-    text-align: center;
+    height: var(--line-height);
+    width: calc(100% - var(--button-width));
     font-size: 2rem;
-    padding: 10px;
-    margin-top: 10px;
 }
 
 input:focus {
-    outline: 0;
-    color: orange;
-}
-
-input:focus::placeholder {
-    color: transparent;
+    outline: none; /* Ocultar marco azul al hacer foco */
 }
 
 input::placeholder {
-    color: orange;
+    color: gold;
     font-style: italic;
+}
+
+input:not(:placeholder-shown) {
+    color: orange;
+}
+
+button {
+    border: none;
+    border-radius: 10px;
+    height: var(--line-height);
+    width: var(--button-width);
+    color: white;
+    background: orange;
+    font-size: 1.5rem;
+
 }

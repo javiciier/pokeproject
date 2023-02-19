@@ -31,7 +31,7 @@ const Header = (): JSX.Element => {
                 <a href={item.link}>
                   <b>{item.id}</b>
                 </a>
-              </li>,
+              </li>
             )}
           </ul>
         </div>
