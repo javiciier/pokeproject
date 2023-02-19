@@ -5,25 +5,30 @@
 }
 
 .container {
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 0 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+.navbar img {
+    margin-top: 10px;
+    height: 60px;
 }
 
 .navbar-items ul {
-  display: flex;
-  justify-content: space-between;
-  list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
 }
 
 .navbar-items ul a {
-  font-size: 1.5em;
-  text-decoration: none;
-  color: #3b4cca;
+    font-size: 1.5em;
+    text-decoration: none;
+    color: #3b4cca;
 }
 
 

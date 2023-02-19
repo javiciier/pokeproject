@@ -1,4 +1,5 @@
 import './styles/header.css';
+import brand from 'assets/brand.png';
 
 interface HeaderLink {
   id: string,
@@ -6,7 +7,6 @@ interface HeaderLink {
 }
 
 const Header = (): JSX.Element => {
-  const PROJECT_NAME: string = process.env.REACT_APP_PROJECT_NAME as string;
 
   const headerLinks : HeaderLink[] = [
     {
@@ -17,19 +17,21 @@ const Header = (): JSX.Element => {
 
   return (
     <nav className="navbar">
-      <div className="container">
-        <div className="brand">
-          <a href='/'>{PROJECT_NAME}</a>
+      <div className='container'>
+        <div className='brand'>
+          <a href='/'>
+            <img src={brand} alt='PokeProject' />
+          </a>
         </div>
 
-        <div className="navbar-items">
+        <div className='navbar-items'>
           <ul>
             {headerLinks.map(item =>
               <li key={item.id}>
                 <a href={item.link}>
                   <b>{item.id}</b>
                 </a>
-              </li>
+              </li>,
             )}
           </ul>
         </div>

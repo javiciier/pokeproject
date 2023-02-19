@@ -1,0 +1,36 @@
+.searchBar {
+    position: relative;
+    margin: 30% auto 0;
+    display: flex;
+    flex-direction: column;
+    align-content: space-around;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    font-size: 2rem;
+}
+
+input {
+    border: none;
+    border-bottom: 2px solid gold;
+    width: 80%;
+    line-height: 40px;
+    text-align: center;
+    font-size: 2rem;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+input:focus {
+    outline: 0;
+    color: orange;
+}
+
+input:focus::placeholder {
+    color: transparent;
+}
+
+input::placeholder {
+    color: orange;
+    font-style: italic;
+}
