@@ -1,4 +1,4 @@
-import './styles/pokemonSearchBar.css';
+import './styles/pokemonSearchInput.css';
 
 import type { ChangeEvent, FormEvent } from 'react';
 import { useState } from 'react';
@@ -24,12 +24,12 @@ const PokemonSearchInput = ({ onInputCallback }: Props): JSX.Element => {
       </label>
       <form role='search' onSubmit={handleSubmit}>
         <input type='text'
-               id='search'
-               value={searchInput}
-               placeholder='Escribe un Pokemon'
-               onChange={(e: ChangeEvent<HTMLInputElement>) => {
-                 setSearchInput(e.target.value);
-               }}
+          id='search'
+          value={searchInput}
+          placeholder='Escribe un Pokemon'
+          onChange={(e: ChangeEvent<HTMLInputElement>) => {
+            setSearchInput(e.target.value);
+          }}
         />
 
         <button type='submit'>BUSCAR</button>

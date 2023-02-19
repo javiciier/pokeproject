@@ -5,4 +5,4 @@
 
 
 /* ********** COMPONENTS ********** */
-export * from './Components';
+export {PokemonSearch, PokemonCard} from './Components';
