@@ -9,10 +9,7 @@ interface HeaderLink {
 const Header = (): JSX.Element => {
 
   const headerLinks : HeaderLink[] = [
-    {
-      id: 'Inicio',
-      link: '/'
-    }
+    //{ id: 'Inicio', link: '/' }
   ]
 
   return (
@@ -24,17 +21,19 @@ const Header = (): JSX.Element => {
           </a>
         </div>
 
-        <div className='navbar-items'>
-          <ul>
-            {headerLinks.map(item =>
-              <li key={item.id}>
-                <a href={item.link}>
-                  <b>{item.id}</b>
-                </a>
-              </li>
-            )}
-          </ul>
-        </div>
+        { (headerLinks.length > 0) &&
+          <div className='navbar-items'>
+            <ul>
+              {headerLinks.map(item =>
+                <li key={item.id}>
+                  <a href={item.link}>
+                    <b>{item.id}</b>
+                  </a>
+                </li>
+              )}
+            </ul>
+          </div>
+        }
       </div>
     </nav>
     

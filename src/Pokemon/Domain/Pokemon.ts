@@ -1,26 +1,26 @@
 export interface Pokemon {
   id: number;
   name: string;
-  baseExperience: number;
+  base_experience: number;
   height: number;
-  isDefault: boolean;
+  is_default: boolean;
   order: number;
   weight: number;
   abilities: Ability[];
   forms: Species[];
-  gameIndices: GameIndex[];
-  heldItems: HeldItem[];
-  locationAreaEncounters: string;
+  game_indices: GameIndex[];
+  held_items: HeldItem[];
+  location_area_encounters: string;
   moves: Move[];
   species: Species;
   sprites: Sprites;
   stats: Stat[];
   types: Type[];
-  pastTypes: PastType[];
+  past_types: PastType[];
 }
 
 export interface Ability {
-  isHidden: boolean;
+  is_hidden: boolean;
   slot: number;
   ability: Species;
 }
@@ -31,13 +31,13 @@ export interface Species {
 }
 
 export interface GameIndex {
-  gameIndex: number;
+  game_index: number;
   version: Species;
 }
 
 export interface HeldItem {
   item: Species;
-  versionDetails: VersionDetail[];
+  version_details: VersionDetail[];
 }
 
 export interface VersionDetail {
@@ -47,13 +47,13 @@ export interface VersionDetail {
 
 export interface Move {
   move: Species;
-  versionGroupDetails: VersionGroupDetail[];
+  version_group_details: VersionGroupDetail[];
 }
 
 export interface VersionGroupDetail {
-  levelLearnedAt: number;
-  versionGroup: Species;
-  moveLearnMethod: Species;
+  level_learned_at: number;
+  version_group: Species;
+  move_learn_method: Species;
 }
 
 export interface PastType {
@@ -66,110 +66,20 @@ export interface Type {
   type: Species;
 }
 
-export interface GenerationV {
-  blackWhite: Sprites;
-}
-
-export interface GenerationIv {
-  diamondPearl: Sprites;
-  heartgoldSoulsilver: Sprites;
-  platinum: Sprites;
-}
-
-export interface Versions {
-  generationI: GenerationI;
-  generationIi: GenerationIi;
-  generationIii: GenerationIii;
-  generationIv: GenerationIv;
-  generationV: GenerationV;
-  generationVi: Record<string, Home>;
-  generationVii: GenerationVii;
-  generationViii: GenerationViii;
-}
-
 export interface Sprites {
-  backDefault: string;
-  backFemale: null;
-  backShiny: string;
-  backShinyFemale: null;
-  frontDefault: string;
-  frontFemale: null;
-  frontShiny: string;
-  frontShinyFemale: null;
-  other?: Other;
-  versions?: Versions;
+  back_default: string;
+  back_female: null;
+  back_shiny: string;
+  back_shinyFemale: null;
+  front_default: string;
+  front_female: null;
+  front_shiny: string;
+  front_shiny_female: null;
   animated?: Sprites;
 }
 
-export interface GenerationI {
-  redBlue: RedBlue;
-  yellow: RedBlue;
-}
-
-export interface RedBlue {
-  backDefault: string;
-  backGray: string;
-  frontDefault: string;
-  frontGray: string;
-}
-
-export interface GenerationIi {
-  crystal: Crystal;
-  gold: Crystal;
-  silver: Crystal;
-}
-
-export interface Crystal {
-  backDefault: string;
-  backShiny: string;
-  frontDefault: string;
-  frontShiny: string;
-}
-
-export interface GenerationIii {
-  emerald: Emerald;
-  fireredLeafgreen: Crystal;
-  rubySapphire: Crystal;
-}
-
-export interface Emerald {
-  frontDefault: string;
-  frontShiny: string;
-}
-
-export interface Home {
-  frontDefault: string;
-  frontFemale: null;
-  frontShiny: string;
-  frontShinyFemale: null;
-}
-
-export interface GenerationVii {
-  icons: DreamWorld;
-  ultraSunUltraMoon: Home;
-}
-
-export interface DreamWorld {
-  frontDefault: string;
-  frontFemale: null;
-}
-
-export interface GenerationViii {
-  icons: DreamWorld;
-}
-
-export interface Other {
-  dreamWorld: DreamWorld;
-  home: Home;
-  officialArtwork: OfficialArtwork;
-}
-
-export interface OfficialArtwork {
-  frontDefault: string;
-}
-
 export interface Stat {
-  baseStat: number;
+  base_stat: number;
   effort: number;
   stat: Species;
 }

@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import PokemonSearchInput from './PokemonSearchInput';
 import PokemonSearchResults from './PokemonSearchResults';
 import { pokemonService as service } from '../Application';
@@ -12,22 +12,24 @@ const PokemonSearch = (): JSX.Element => {
 
   /** Recupera la consulta de la barra de búsqueda */
   const handleQueryChange = async (input: string): Promise<void> => {
+    if (input === '') {
+      setError(new Error('Escribe un pokemon'));
+
+      return;
+    }
     setQuery(input);
 
     try {
-      let pokemon: Pokemon = await service.getPokemon(input);
+      let pokemon: Pokemon = await service.getPokemon(input.trim());
       setPokemon(pokemon);
     } catch (err) {
-      if (err instanceof Error)
-      setError(err);
       setPokemon(null);
+      if (err instanceof Error) {
+        setError(err);
+      }
     }
   };
 
-
-  useEffect(() => {
-    console.log(`Query value: \'${query}\'`);
-  }, [query])
 
   return (
     <div className="pokemonSearch">
