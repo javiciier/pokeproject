@@ -8,6 +8,7 @@ import './styles/pokemonSearch.css';
 const PokemonSearch = (): JSX.Element => {
   const [query, setQuery] = useState<string>('');
   const [error, setError] = useState<Nullable<Error>>(null);
+  const [isLoading, setLoading] = useState<boolean>(false);
   const [pokemon, setPokemon] = useState<Nullable<Pokemon>>(null);
 
   /** Recupera la consulta de la barra de búsqueda */
@@ -20,6 +21,7 @@ const PokemonSearch = (): JSX.Element => {
     setQuery(input);
 
     try {
+      setLoading(true);
       let pokemon: Pokemon = await service.getPokemon(input.trim());
       setPokemon(pokemon);
     } catch (err) {
@@ -28,13 +30,16 @@ const PokemonSearch = (): JSX.Element => {
         setError(err);
       }
     }
+    finally {
+      setLoading(false);
+    }
   };
 
 
   return (
     <div className="pokemonSearch">
       <PokemonSearchInput onInputCallback={handleQueryChange} />
-      <PokemonSearchResults pokemon={pokemon}/>
+      <PokemonSearchResults pokemon={pokemon} isLoading={isLoading}/>
     </div>
   );
 };
